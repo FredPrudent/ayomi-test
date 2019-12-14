@@ -9,9 +9,9 @@ class SignUp (models.Model):
     email = models.EmailField()
     
 
-@receiver(post_save, sender=User)
-def update_user_profile(sender, instance, created, **kwargs):
-    if created:
-        User.objects.create(user=instance)
-    instance.profile.save()
+# @receiver(post_save, sender=User)
+# def update_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         User.objects.create(user=instance)
+#     instance.profile.save()
     
