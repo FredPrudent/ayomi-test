@@ -1,9 +1,13 @@
 from django import forms
-from.models import SignUp
 
-class SignUpForm(forms.ModelForm):
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+    
     class Meta:
-        model = SignUp
+        model = User
         fields = ['email']
 
     def clean_email(self):
