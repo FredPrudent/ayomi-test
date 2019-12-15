@@ -112,3 +112,5 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 MADIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
 
+
+

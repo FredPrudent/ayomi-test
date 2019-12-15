@@ -7,7 +7,7 @@ from django.contrib import admin
 urlpatterns = [
         # Examples:
     url(r'^$', 'ayomi.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+    url(r'^profile/', 'ayomi.views.profile', name='profile'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]

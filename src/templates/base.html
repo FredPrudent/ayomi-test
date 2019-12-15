@@ -9,8 +9,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/signin/">
+    <link rel="icon" href="{% static 'css/favicon.png' %}">
+    
 
     <title>Inscrivez-vous !</title>
 
@@ -43,17 +43,18 @@
 
     <div class="container">
 
-      <form class="form-signin" method='POST'> {% csrf_token %}
-        <h2 class="form-signin-heading">{{title}}</h2>
-        {{form}}
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+      {% block content %}
+      {% endblock %}
 
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    
     <script src="{% static 'js/ie10-viewport-bug-workaround.js'%}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
   </body>
 </html>
