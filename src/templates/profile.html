@@ -4,7 +4,11 @@
 {% block content %}
 <h1>Profil de {{user.username}} </h1>
 
+{% if user.email %}
 <h2>L'email associé à ce compte est <b>{{user.email}}</b> </h2>
+{% else %}
+<h2>Pas d'email associé à ce compte pour le moment.</h2>
+{% endif %}
 
 <button type="button" class="btn btn-primary btn-long" data-toggle="modal" data-target="#emailModal">Modifier l'email associé</button>
 

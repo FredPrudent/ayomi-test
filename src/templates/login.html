@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
+<h1>page login</h1>
 
 {% block content %}
     <form class='form-signin' method = "POST" action = "">{% csrf_token %}
-        <h1 class="form-signin-heading">Bienvenue {% if user.is_authenticated %} {{user}} {% endif %} </h1>
+        <h1 class="form-signin-heading">Connectez-vous </h1>
         {{form|crispy}}
         
         <button class='btn btn-lg btn-primary btn-block' type="submit">S'inscrire</button>
@@ -12,6 +13,3 @@
     </form>
 
 {% endblock %}
-
-
-

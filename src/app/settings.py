@@ -115,4 +115,6 @@ MADIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_roo
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+LOGIN_REDIRECT_URL = 'account-redirect'
+
 
